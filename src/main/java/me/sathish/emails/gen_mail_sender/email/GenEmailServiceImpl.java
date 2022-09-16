@@ -31,7 +31,7 @@ public class GenEmailServiceImpl {
     public void sendHtmlMessage(String to, String subject, String text) throws MessagingException {
         MimeMessage mimeMessage = emailSender.createMimeMessage();
 
-        MimeMessageHelper message = new MimeMessageHelper(mimeMessage, true,"UTF-8");
+        MimeMessageHelper message = new MimeMessageHelper(mimeMessage, true, "UTF-8");
 
         Map<String, Object> templateModel = new HashMap<>();
         templateModel.put("recipientName", to);
